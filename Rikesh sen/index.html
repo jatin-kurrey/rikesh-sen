@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLA Rikesh Sen - Vaishali Nagar, Bhilai (Dynamic)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f7f7; }
+        /* BJP/Saffron/Blue Theme */
+        .saffron-bg { background-color: #ff9933; }
+        .saffron-text { color: #ff9933; }
+        .bjp-blue { background-color: #000080; }
+        .bjp-text-blue { color: #000080; }
+        
+        .nav-link:hover { transform: scale(1.05); }
+        .mandate-shadow { box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.06); }
+        .text-devnagari { font-family: 'Inter', sans-serif; }
+        .section-separator { border-top: 3px solid #000080; width: 100px; margin: 1rem 0; }
+        
+        /* Loading Skeleton */
+        .skeleton {
+            background-color: #e2e8f0;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-container { grid-template-columns: 2fr 1fr; }
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+
+    <!-- Header and Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                    <a href="#home" class="flex items-center">
+                        <span class="text-3xl font-extrabold saffron-text mr-2">जय जोहार</span>
+                        <span class="text-xl font-bold text-gray-800">| MLA Rikesh Sen</span>
+                    </a>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-6 lg:space-x-10">
+                    <a href="#home" class="nav-link text-lg font-medium text-gray-700 hover:text-blue-800 transition text-devnagari">गृह पृष्ठ</a>
+                    <a href="#parichay" class="nav-link text-lg font-medium text-gray-700 hover:text-blue-800 transition text-devnagari">परिचय</a>
+                    <a href="#karya" class="nav-link text-lg font-medium text-gray-700 hover:text-blue-800 transition text-devnagari">मेरा कार्य</a>
+                    <a href="#transparency" class="nav-link text-lg font-medium text-gray-700 hover:text-blue-800 transition text-devnagari">जवाबदेही</a>
+                    <a href="#contact" class="nav-link text-lg font-medium text-gray-700 hover:text-blue-800 transition text-devnagari">संपर्क</a>
+                </nav>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" type="button" class="bg-gray-100 p-2 rounded-md inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-50">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-800 hover:bg-gray-100 text-devnagari">गृह पृष्ठ</a>
+                <a href="#parichay" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-800 hover:bg-gray-100 text-devnagari">परिचय</a>
+                <a href="#karya" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-800 hover:bg-gray-100 text-devnagari">मेरा कार्य</a>
+                <a href="#transparency" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-800 hover:bg-gray-100 text-devnagari">जवाबदेही</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-800 hover:bg-gray-100 text-devnagari">संपर्क</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 space-y-20">
+
+        <!-- Home Section (गृह पृष्ठ) - Static Portrait Image -->
+        <section id="home" class="py-12 md:py-16 bg-white rounded-xl shadow-2xl overflow-hidden">
+            <div class="lg:grid hero-container gap-10 items-center p-6 sm:p-10">
+                
+                <!-- Text Content -->
+                <div class="order-2 lg:order-1">
+                    <p class="text-2xl font-semibold bjp-text-blue text-devnagari">छत्तीसगढ़ की पहचान:</p>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl mt-4 font-extrabold tracking-tight text-gray-900 leading-tight">
+                        <span class="saffron-text block">वैशाली नगर</span>
+                        <span class="bjp-text-blue block mt-2">का सेवक, Rikesh Sen</span>
+                    </h1>
+                    <p class="mt-4 text-xl text-gray-600 font-medium italic">
+                        "Ek Nayi Pehchan. जमीन से जुड़ा हुआ, विकास को समर्पित।"
+                    </p>
+                    <div class="mt-8">
+                        <div class="inline-block px-6 py-3 bjp-blue text-white rounded-lg font-bold text-lg mandate-shadow">
+                            2023 Victory: 40,074 Votes of Trust
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- MLA Photo (Reference Image) -->
+                <div class="order-1 lg:order-2 mb-8 lg:mb-0 flex justify-center">
+                    <div class="w-64 h-64 sm:w-80 sm:h-80 bg-gray-200 rounded-full overflow-hidden border-8 border-saffron-text shadow-xl">
+                        <img src="Gemini_Generated_Image_fhudvvfhudvvfhud.png" 
+                             alt="MLA Rikesh Sen Official Portrait" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- Key Achievements / Policy Focus (Dynamic Images) -->
+        <section id="karya" class="py-12">
+            <h2 class="text-4xl font-extrabold text-gray-900 text-center text-devnagari">वैशाली नगर में मेरा कार्य (Work Portfolio)</h2>
+            <div class="section-separator mx-auto bg-blue-800"></div>
+            
+            <div class="mt-10 grid gap-8 lg:grid-cols-2">
+
+                <!-- Shakti Yojana Card (Image will be generated here) -->
+                <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-pink-500">
+                    <div id="shakti-image-container" class="mb-4 w-full h-48 skeleton rounded-lg flex items-center justify-center text-gray-600 font-semibold">
+                         <!-- Image Generating... -->
+                          <img src="./Gemini_Generated_Image_fhudvvfhudvvfhud.png" alt="" srcset="">
+                        <span class="text-pink-500"></span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="h-10 w-10 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        <h3 class="ml-4 text-3xl font-bold text-gray-900 text-devnagari">शक्ति योजना - Empowering Women</h3>
+                    </div>
+                    <p class="mt-4 text-gray-600">यह हमारा सबसे बड़ा सामाजिक कार्यक्रम है, जो वैशाली नगर की महिलाओं को शिक्षा, कौशल विकास (Computer Training) और स्वरोजगार के लिए सहायता प्रदान करता है। यह योजना समाज में समानता और प्रगति सुनिश्चित करती है।</p>
+                    <a href="#shakti-details" class="mt-4 inline-block font-bold text-pink-600 hover:text-pink-800 transition">योजना के बारे में और जानें &rarr;</a>
+                </div>
+
+                <!-- PWD Reinstatement Card (Image will be generated here) -->
+                <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-green-600">
+                    <div id="pwd-image-container" class="mb-4 w-full h-48 skeleton rounded-lg flex items-center justify-center text-gray-600 font-semibold">
+                        <!-- Image Generating... -->
+                        <span class="text-green-600">PWD Bahali image generate ho rahi hai...</span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="h-10 w-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM9 17a3 3 0 000 6h6a3 3 0 000-6"></path></svg>
+                        <h3 class="ml-4 text-3xl font-bold text-gray-900 text-devnagari">200+ PWD कर्मचारियों की बहाली</h3>
+                    </div>
+                    <p class="mt-4 text-gray-600">चुनाव के बाद PWD विभाग से हटाए गए 200 से अधिक ठेका कर्मचारियों को वापस काम पर बहाल कराया गया। यह हमारे मजदूर वर्ग के लिए न्याय और रोजगार सुनिश्चित करने की हमारी प्रतिबद्धता का प्रमाण है।</p>
+                    <a href="#labour-success" class="mt-4 inline-block font-bold text-green-600 hover:text-green-800 transition">पूरी केस स्टडी पढ़ें &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biography Section (परिचय) -->
+        <section id="parichay" class="py-12 bg-gray-50 rounded-xl p-8 shadow-inner">
+            <h2 class="text-4xl font-extrabold text-gray-900 text-center text-devnagari">मेरा परिचय: Aspirational Common Man</h2>
+            <div class="section-separator mx-auto bg-blue-800"></div>
+
+            <div class="mt-10 lg:flex lg:space-x-10">
+                <div class="lg:w-2/3">
+                    <h3 class="text-2xl font-bold bjp-text-blue mb-4">जमीन से संसद तक का सफर</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">Shri Rikesh Sen का जीवन संघर्ष और सेवा का प्रतीक है। Vaishali Nagar के लोग उन्हें एक **'Pan-Seller' (पांडेला चलाने वाला)** के रूप में जानते थे। उनका यह सफर दिखाता है कि कैसे एक आम इंसान भी अपनी मेहनत और जनता के प्रति समर्पण से सर्वोच्च राजनीतिक पद तक पहुंच सकता है। उनकी शिक्षा **B.S.P. Higher Secondary School, Bhilai (Class 12th in 1997)** में हुई, जो उन्हें इस क्षेत्र की जड़ों से और भी गहराई से जोड़ता है।</p>
+                    
+                    <h3 class="text-2xl font-bold bjp-text-blue mb-4">अनुभव ही सबसे बड़ी शिक्षा</h3>
+                    <p class="text-gray-700 leading-relaxed">MLA Sen अपनी 'Elite Academic Credentials' के बजाय **'A Lifetime of Education in Public Service'** पर ज़ोर देते हैं। उनका मानना है कि जनता के बीच रहकर काम करने का अनुभव, किताबी ज्ञान से कहीं ज़्यादा महत्वपूर्ण है। उन्होंने 2023 के चुनाव में मिली 40,074 वोटों की विशाल जीत को Vaishali Nagar की जनता का उनके इसी ज़मीनी नेतृत्व पर अटूट विश्वास माना है।</p>
+                </div>
+                <div class="lg:w-1/3 mt-8 lg:mt-0">
+                    <div class="bjp-blue p-6 rounded-lg text-white shadow-lg">
+                        <h4 class="text-xl font-bold mb-3">Quick Facts</h4>
+                        <ul class="space-y-2 text-lg">
+                            <li>**Constituency:** Vaishali Nagar, Durg (CG)</li>
+                            <li>**Party:** Bharatiya Janata Party (BJP)</li>
+                            <li>**Educational Background:** Class 12 (1997)</li>
+                            <li>**Winning Margin (2023):** 40,074 Votes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legislative Record (विधानसभा रिकॉर्ड) -->
+        <section id="legislative" class="py-12">
+            <h2 class="text-4xl font-extrabold text-gray-900 text-center text-devnagari">विधानसभा रिकॉर्ड (Execution Over Debate)</h2>
+            <div class="section-separator mx-auto bg-blue-800"></div>
+            
+            <div class="mt-10 grid gap-8 md:grid-cols-3 text-center">
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-blue-800">
+                    <div class="text-6xl font-extrabold bjp-text-blue">100%</div>
+                    <p class="mt-2 text-lg font-semibold text-gray-600">Assembly Attendance</p>
+                    <p class="text-sm text-gray-500 mt-1">कर्तव्यों के प्रति अटूट समर्पण</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-saffron-text">
+                    <div class="text-6xl font-extrabold saffron-text">Execution</div>
+                    <p class="mt-2 text-lg font-semibold text-gray-600">Focus on Implementation</p>
+                    <p class="text-sm text-gray-500 mt-1">सवाल नहीं, सीधे समाधान (जैसे PWD बहाली)</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-blue-800">
+                    <div class="text-6xl font-extrabold bjp-text-blue">Budget</div>
+                    <p class="mt-2 text-lg font-semibold text-gray-600">Strong Policy Alignment</p>
+                    <p class="text-sm text-gray-500 mt-1">PM आवास योजना और महतारी वंदन योजना के लिए फंडिंग सुनिश्चित</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transparency & Disclosure (पारदर्शिता और जवाबदेही) -->
+        <section id="transparency" class="py-12 bg-white rounded-xl p-8 shadow-xl">
+            <h2 class="text-4xl font-extrabold text-gray-900 text-center text-devnagari">पारदर्शिता और जवाबदेही (Transparency & Accountability)</h2>
+            <div class="section-separator mx-auto bg-blue-800"></div>
+
+            <div class="mt-10 space-y-8">
+                
+                <!-- Financial Assets -->
+                <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+                    <h3 class="text-2xl font-bold bjp-text-blue mb-3">Financial Assets Summary (Affidavit Data)</h3>
+                    <p class="text-gray-600 mb-4">सार्वजनिक जीवन में पारदर्शिता हमारा मुख्य सिद्धांत है। यहाँ 2023 चुनाव हलफनामे के अनुसार संपत्ति का विवरण दिया गया है:</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>**Total Immovable Assets:** ₹1.1 Crore+ (Residential House EWS-286, Vaishali Nagar Included)</li>
+                        <li>**Movable Assets (Self & Spouse):** Approx. ₹13.7 Lakhs</li>
+                        <li>*Source: Official Election Affidavit, 2023.*</li>
+                    </ul>
+                </div>
+
+                <!-- Legal Status Disclosure -->
+                <div class="p-6 bg-red-50 rounded-lg border border-red-300">
+                    <h3 class="text-2xl font-bold text-red-700 mb-3">Voluntary Legal Disclosure Summary</h3>
+                    <p class="text-gray-700 mb-4">सार्वजनिक जीवन में सक्रिय होने के कारण राजनीतिक संघर्ष से जुड़े मामले दर्ज हुए हैं।</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 font-medium">
+                        <li>**Case 1 (2012 FIR):** IPC Sections 186, 353, 448. <span class="text-red-800 font-bold">Context: Struggles in the fight for Vaishali Nagar constituents (political activism and confrontation).</span></li>
+                        <li>**Case 2:** Section 138, Negotiable Instrument Act. <span class="text-red-800 font-bold">Context: Private financial dispute (Cheque Bounce).</span></li>
+                    </ul>
+                    <p class="mt-4 text-sm text-red-600">सभी मामले अदालत में विचाराधीन हैं और कानून का पालन किया जा रहा है।</p>
+                </div>
+                
+                <!-- Official Statements (Controversy Mitigation) -->
+                <div class="p-6 bg-blue-50 rounded-lg border border-blue-300">
+                    <h3 class="text-2xl font-bold bjp-text-blue mb-3 text-devnagari">आधिकारिक वक्तव्य और मीडिया स्पष्टीकरण</h3>
+                    <p class="text-gray-700">**BSP Bungalow Dispute:** यह स्पष्ट किया जाता है कि निवास Bhilai Steel Plant (BSP) प्रबंधन द्वारा एक सिटिंग MLA के रूप में आधिकारिक आवंटन प्रक्रियाओं के तहत प्रदान किया गया है, न कि व्यक्तिगत अधिग्रहण के रूप में।</p>
+                    <p class="text-gray-700 mt-3">**Nakta Pond Renaming:** हम सांस्कृतिक विरासत और स्थानीय समुदाय (सतनामी समुदाय) के सम्मान को प्राथमिकता देते हैं। नामकरण का अंतिम निर्णय कानूनी और नगर निगम की प्रक्रिया (General Assembly Vote) के माध्यम से ही लिया जाएगा।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (संपर्क और शिकायत निवारण) -->
+        <section id="contact" class="py-12 bg-white rounded-xl p-8 shadow-xl">
+            <h2 class="text-4xl font-extrabold text-gray-900 text-center text-devnagari">संपर्क और शिकायत निवारण (Get In Touch)</h2>
+            <div class="section-separator mx-auto bg-blue-800"></div>
+
+            <div class="mt-10 grid gap-8 md:grid-cols-2">
+                <!-- Contact Form -->
+                <div class="md:col-span-1">
+                    <h3 class="text-2xl font-bold bjp-text-blue mb-4 text-devnagari">शिकायत या सुझाव दर्ज करें</h3>
+                    <form action="#" method="POST" class="space-y-4">
+                        <input type="text" placeholder="आपका नाम" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        <input type="tel" placeholder="मोबाइल नंबर" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                            <option>शिकायत का प्रकार चुनें (Housing, Labor, PWD, General)</option>
+                            <option>Housing Issue</option>
+                            <option>Labor/Employment Issue</option>
+                            <option>Infrastructure/PWD</option>
+                            <option>Shakti Yojana Query</option>
+                            <option>General Suggestion</option>
+                        </select>
+                        <textarea placeholder="आपका संदेश/शिकायत" rows="4" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        <button type="submit" class="w-full px-6 py-3 bjp-blue text-white font-bold rounded-lg hover:bg-blue-900 transition text-lg">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Office Details -->
+                <div class="md:col-span-1 p-6 bg-gray-50 rounded-lg shadow">
+                    <h3 class="text-2xl font-bold bjp-text-blue mb-4 text-devnagari">Official Office Address</h3>
+                    <p class="text-gray-700 text-lg font-medium">MLA Office, Vaishali Nagar Assembly Constituency</p>
+                    <address class="mt-2 text-gray-600">
+                        Near Bhilai Steel Plant (BSP) Area, <br>
+                        Durg District, Chhattisgarh, India
+                    </address>
+                    <p class="mt-4 text-gray-700 font-bold">Phone: +91-XXXXXXXXXX</p>
+
+                    <h3 class="text-2xl font-bold bjp-text-blue mt-6 mb-3 text-devnagari">Social Media</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com/your-page" target="_blank" class="text-blue-600 hover:text-blue-800 transition">
+                            <!-- Facebook Icon SVG Placeholder -->
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.35c0 .732.593 1.325 1.325 1.325h11.498v-9.294h-3.128v-3.626h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.793.143v3.235h-1.921c-1.503 0-1.795.715-1.795 1.765v2.316h3.626l-.472 3.626h-3.154v9.294h6.116c.732 0 1.325-.593 1.325-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                        </a>
+                        <a href="https://youtube.com/your-channel" target="_blank" class="text-red-600 hover:text-red-800 transition">
+                             <!-- YouTube Icon SVG Placeholder -->
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.125c-.76-1.077-1.442-1.229-2.072-1.357-1.75-.366-3.5-.549-5.25-.549s-3.5.183-5.25.549c-.63.128-1.312.28-2.072 1.357-1.144 1.623-1.312 3.738-1.312 6.875s.168 5.252 1.312 6.875c.76 1.077 1.442 1.229 2.072 1.357 1.75.366 3.5.549 5.25.549s3.5-.183 5.25-.549c.63-.128 1.312-.28 2.072-1.357 1.144-1.623 1.312-3.738 1.312-6.875s-.168-5.252-1.312-6.875zm-6.075 9.17l-3.333 1.958v-3.916l3.333 1.958z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Rikesh Sen, MLA Vaishali Nagar. All Rights Reserved. | <span class="saffron-text font-semibold">Dedicated to Seva and Progress.</span></p>
+            <p class="mt-2 text-sm text-gray-400">Powered by the Mandate of 40,074 Votes.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- API Configuration and Utility Functions ---
+        const apiKey = ""; 
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${apiKey}`;
+
+        // Function to handle exponential backoff for API retries
+        async function fetchWithRetry(url, options, maxRetries = 5) {
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (response.status !== 429 && response.ok) {
+                        return response;
+                    }
+                    if (i === maxRetries - 1) throw new Error(`API failed after ${maxRetries} attempts.`);
+                } catch (error) {
+                    console.error('Fetch attempt failed:', error.message);
+                }
+                const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                await new Promise(resolve => setTimeout(resolve, delay));
+            }
+        }
+
+        /**
+         * Generates an image using the Imagen API and displays it in the specified container.
+         * @param {string} prompt - The text prompt for image generation.
+         * @param {string} containerId - The ID of the HTML element where the image should be placed.
+         * @param {string} altText - Alt text for the generated image.
+         */
+        async function generateAndDisplayImage(prompt, containerId, altText) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            // Show loading state
+            container.innerHTML = `<svg class="animate-spin h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <p class="mt-2 text-sm text-gray-500">Image Generating from Prompt: "${prompt}"</p>`;
+            container.classList.add('skeleton');
+
+            const payload = { 
+                instances: [{ prompt: prompt }], 
+                parameters: { "sampleCount": 1 } 
+            };
+
+            try {
+                const response = await fetchWithRetry(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const result = await response.json();
+
+                if (result.predictions && result.predictions.length > 0 && result.predictions[0].bytesBase64Encoded) {
+                    const base64Data = result.predictions[0].bytesBase64Encoded;
+                    const imageUrl = `data:image/png;base64,${base64Data}`;
+
+                    // Update the container with the generated image
+                    container.innerHTML = `<img src="${imageUrl}" alt="${altText}" class="w-full h-full object-cover rounded-lg">`;
+                    container.classList.remove('skeleton');
+                    container.classList.remove('flex'); // Remove flex properties to center image
+                    container.classList.remove('items-center');
+                    container.classList.remove('justify-center');
+                } else {
+                    container.innerHTML = `<div class="text-red-500 text-center p-4">Image generate nahi ho payi. Please try again.</div>`;
+                    container.classList.remove('skeleton');
+                }
+            } catch (error) {
+                console.error('Image Generation Error:', error);
+                container.innerHTML = `<div class="text-red-500 text-center p-4">API error aagaya: ${error.message}</div>`;
+                container.classList.remove('skeleton');
+            }
+        }
+
+        // --- Event Listeners and Initial Load ---
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            document.getElementById('mobile-menu-button').addEventListener('click', function() {
+                var menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                });
+            });
+
+            // Start generating dynamic images on page load
+            const shaktiPrompt = "Photo-realistic image of three Indian women in Chhattisgarh, wearing simple, traditional attire, confidently receiving computer training in a bright, modern community hall, symbolizing skill development and empowerment. The visual style should match the provided portrait of Rikesh Sen (grounded, warm tones).";
+            generateAndDisplayImage(shaktiPrompt, 'shakti-image-container', 'Women empowerment and skill development under Shakti Yojana.');
+
+            const pwdPrompt = "Photo-realistic image of a newly constructed road in a semi-urban area of Bhilai, Chhattisgarh, with a banner thanking the local MLA for labor reinstatement, symbolizing successful infrastructure execution and justice for contract workers. The visual style should match the provided portrait of Rikesh Sen (grounded, warm tones).";
+            generateAndDisplayImage(pwdPrompt, 'pwd-image-container', 'PWD workers reinstatement and infrastructure project completion.');
+        });
+    </script>
+</body>
+</html>
